@@ -1,5 +1,5 @@
 <template>
-  <form action="http://67.205.141.7:3000/api/lista" method="POST" @submit="addRegistro">  
+  <form action="http://67.205.141.7:3000/api/lista" method="POST" @submit.prevent="addRegistro">  
     <h1>Formulario de registro</h1>
     <div class="row mb-3">
         <label class="form-label" for="">Fecha</label>
@@ -106,7 +106,7 @@ export default defineComponent({
   methods: {
   
     getRegistros (){
-       fetch('http:/67.205.141.7:3000/api/lista')
+       fetch('http://67.205.141.7:3000/api/lista')
         .then(res => res.json())
         .then(data => {
           console.log(data);
