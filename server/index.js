@@ -40,7 +40,7 @@ app.post('/api/lista', async(req, res)=>{
       });
       const savedRegistro = await nuevoRegistro.save();
       console.log(savedRegistro);
-      return res.send('hola')
+      res.send('hola')
     return  res.send('saved')
    } catch(e){
       console.log(e)
