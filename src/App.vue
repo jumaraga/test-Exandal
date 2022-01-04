@@ -113,7 +113,6 @@ export default defineComponent({
           this.registros = data;
           console.log(this.registros)
         })
-        this.getRegistros();
     },
     addRegistro(){
       console.log(this.registro)
@@ -127,9 +126,9 @@ export default defineComponent({
       })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
-        
+        this.getRegistros();
       })
+      
     },
   }
 });
