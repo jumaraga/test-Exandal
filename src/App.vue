@@ -33,7 +33,7 @@
       <label class="form-label" for="">Und Med</label>
       <input name="und_med" type="text" v-model="registro.und_med">
       <label class="form-label" for="">KG</label>
-      <input name="kg" type="number" v-model="registro.Kg">
+      <input name="kg" type="number" v-model="registro.kg">
     </div>
     <label class="form-label" for="">Descripción</label>
     <textarea name="descripcion" id="" cols="10" rows="5" v-model="registro.descripcion"></textarea>
@@ -69,7 +69,7 @@
           <td>{{ registro.numero_lote }}</td>
           <td>{{ registro.codigo_material }}</td>
           <td>{{ registro.descripcion }}</td>
-          <td>{{ registros.length }}</td>
+          <td>{{ registro.und_med }}</td>
           <td class="last_column">{{ registro.kg }}</td>
         </tr>
       </tbody>
@@ -127,7 +127,7 @@ export default defineComponent({
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        this.getRegistros()
+        this.getRegistros();
       })
     },
   }

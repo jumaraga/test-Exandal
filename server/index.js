@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose =require('mongoose');
-require('dotenv').config()
-const path =require('path')
+require('dotenv').config();
+const path =require('path');
 const  {Registro}  = require("./models/registro");
 const morgan = require('morgan');
 const app = express();
@@ -35,7 +35,8 @@ app.post('/api/lista', async(req, res)=>{
         numero_lote: body.numero_lote,
         codigo_material:body.codigo_material,
         und_med:body.und_med,
-        kg:body.kg
+        kg:body.kg,
+        descripcion:body.descripcion,
       });
       const savedRegistro = await nuevoRegistro.save();
       console.log(savedRegistro);
