@@ -125,9 +125,9 @@ export default defineComponent({
         }
       })
       .then(res => res.json())
-      .then(data => {
-        this.getRegistros();
-      })
+      .then(data => (
+        this.getRegistros()
+      ))
       
     },
   }
